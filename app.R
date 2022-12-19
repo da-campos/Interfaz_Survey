@@ -7,20 +7,6 @@ library(DBI)
 library(shinydashboard)
 
 
-db <- "ciencia_tecnologia"
-db_host <- "104.248.113.13"
-db_port <- "5432"
-db_user <- "aire"
-db_pass <- "Aire2022*"
-
-con <- dbConnect(
-  RPostgres::Postgres(),
-  dbname = db,
-  host = db_host,
-  port = db_port,
-  user = db_user,
-  password = db_pass
-)
 
 exceldata = read_excel(file.choose())
 productos_ctei = data.frame(exceldata)
